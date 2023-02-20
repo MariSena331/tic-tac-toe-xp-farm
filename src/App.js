@@ -38,8 +38,8 @@ function App() {
 
       <div className="game-panel">
         <div className="players-panel">
-          <p className={player1.isCurrentPlayer ? 'current-player' : ''}>Player 1 {player1.symbol}</p>
-          <p className={player2.isCurrentPlayer ? 'current-player' : ''}>Player 2 {player2.symbol}</p>
+          <p className={currentPlayer === player1.symbol ? 'current-player' : ''}>Player 1 {player1.symbol}</p>
+          <p className={currentPlayer === player2.symbol ? 'current-player' : ''}>Player 2 {player2.symbol}</p>
         </div>
         <div className="grid-area">
           {
