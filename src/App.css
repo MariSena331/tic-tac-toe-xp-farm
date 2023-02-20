@@ -1,5 +1,33 @@
 .App {
-  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App .players-panel {
+  flex-direction: column;
+}
+
+
+.grid-area {
+  display: flex;
+}
+
+.current-player {
+  border: 2px #8900ff solid;
+}
+
+.grid {
+  width: 40px;
+  height: 40px;
+  border: 2px #8900ff solid;
+  background-color: white;
+  color: black;
 }
 
 .App-logo {
@@ -14,14 +42,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
 }
 
 .App-link {
