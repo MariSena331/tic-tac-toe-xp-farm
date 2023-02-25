@@ -1,5 +1,5 @@
 import './App.css';
-import { React, useState, useRef } from 'react';
+import { React, useState } from 'react';
 
 function App() {
   const [player1, setPlayer1] = useState({
@@ -12,7 +12,7 @@ function App() {
   });
   const [turn, setTurn] = useState(0);
   const [endGame, setEndGame] = useState(false);
-  const [currentPlayer, setCurrentPlayer] = useState('');
+  const [currentPlayer, setCurrentPlayer] = useState('x');
 
   const handleGameTurn = () => {
     if(turn === 8) {
@@ -23,6 +23,13 @@ function App() {
   }
 
   const handlePlayerClick = layer => {
+    if (turn === 0 || turn === 2 || turn === 4 || turn === 6 || turn === 8) {
+      setCurrentPlayer(player1.symbol);
+    }
+    if (turn === 1 || turn === 3 || turn === 5 || turn === 7) {
+      setCurrentPlayer(player2.symbol);
+    }
+
     handleGameTurn();
   }
 
